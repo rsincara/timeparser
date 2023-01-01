@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Time parser</title>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+  </head>
+  <body>
+
+  <div id="overlay" class="modal-overlay">
+  </div>
+
+  <div class="modal-wrapper">
+    <div class="modal">
+      <h2 class="modal-title">
+        Формат входных данных
+      </h2>
+      <div class="modal-content">
+        <p> Название задачи </p>
+        <p> время - что сделал </p>
+        <br />
+        <p> <b>Пример:</b> </p> <br />
+        <pre>
+TASK-1475
+10m - ДСМ
+10m - ДСМ
+10m - ДСМ
+
+TASK-598
+20m - Ревью
+1h 20m - Дискуссия о высоком
+
+TASK-2497
+30m - Просмотр сериала
+        </pre>
+      </div>
+    </div>
+  </div>
+    <header class="header">
+      <h1 class="title">Time parser</h1>
+      <button id="help" class="help">?</button>
+    </header>
+    <p class="description">Вставьте сюда логи и нажмите кнопку "Рассчитать"</p>
+    <div class="user-input-wrapper">
+      <textarea id="user-input"></textarea>
+    </div>
+    <div class="buttons">
+      <button class="button" id="calculate-btn">
+        Рассчитать
+      </button>
+
+      <button class="button" id="clear">
+        Очистить
+      </button>
+    </div>
+
+    <ul class="result">
+      <li id="remaining"></li>
+      <li id="lowest-time"></li>
+      <li id="largest-time"></li>
+    </ul>
+
+  <script src="core.js">
+  </script>
+  </body>
+</html>

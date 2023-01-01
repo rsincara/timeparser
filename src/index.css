@@ -1,0 +1,147 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
+    Arial, sans-serif;
+  width: 80%;
+  height: 100%;
+  padding-top: 16px;
+  margin: 0 auto;
+
+  color: #ffffff;
+
+  background-size: cover;
+  background-attachment: fixed;
+  background-image: url("img/3724556.png");
+}
+
+.header {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  margin-bottom: 16px;
+}
+
+.help {
+  border-radius: 100%;
+  width: 24px;
+  height: 24px;
+
+  transition: .5s;
+  cursor: pointer;
+}
+
+.help:hover {
+  transform: scale(1.2);
+}
+
+.description {
+  margin-bottom: 16px;
+}
+
+.user-input-wrapper {
+  margin-bottom: 16px;
+}
+
+#user-input {
+  width: 100%;
+  height: 265px;
+  padding: 8px;
+
+  outline: 0;
+  resize: vertical;
+}
+
+.buttons {
+  display: flex;
+}
+
+.button {
+  padding: 8px 16px;
+  margin-bottom: 16px;
+}
+
+#calculate-btn {
+  margin-right: 16px;
+}
+
+.result {
+  display: none;
+}
+
+.result > * {
+  margin-bottom: 4px;
+}
+
+.result span {
+  color: green;
+  background: #ffffff;
+  padding: 0 2px;
+}
+
+@keyframes appear-animation {
+  from {
+    filter: opacity(0);
+  }
+
+  to {
+    filter: opacity(1);
+  }
+}
+
+.modal-overlay {
+  display: none;
+
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  height: 100%;
+  width: 100%;
+
+  background: #000000;
+  opacity: 0.5;
+
+  animation-name: appear-animation;
+  animation-duration: .5s;
+}
+
+.modal-wrapper {
+  display: none;
+
+  position: absolute;
+
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+
+  width: fit-content;
+  height: fit-content;
+
+  margin: auto;
+
+  animation-name: appear-animation;
+  animation-duration: .5s;
+}
+
+.modal {
+  background: #ffffff;
+
+  color: #0d0d0d;
+
+  padding: 16px 32px;
+}
+
+.modal-title {
+  margin-bottom: 16px;
+}
